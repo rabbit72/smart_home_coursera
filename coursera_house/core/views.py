@@ -12,11 +12,16 @@ class ControllerView(FormView):
 
     def get_context_data(self, **kwargs):
         context = super(ControllerView, self).get_context_data()
-        context['data'] = {}
+        context['data'] = {"light": "Off"}
         return context
 
     def get_initial(self):
-        return {}
+        return {
+            "bedroom_target_temperature": 22,
+            "hot_water_target_temperature": 88,
+            "bedroom_light": True,
+            "bathroom_light": True,
+        }
 
     def form_valid(self, form):
         return super(ControllerView, self).form_valid(form)
