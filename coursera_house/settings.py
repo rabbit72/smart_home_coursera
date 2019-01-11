@@ -119,11 +119,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
-SMART_HOME_ACCESS_TOKEN = os.getenv('SMART_HOME_ACCESS_TOKEN')
+SMART_HOME_ACCESS_TOKEN = os.getenv('SMART_HOME_ACCESS_TOKEN', "Bearer e22d54b803217c9bb34ff69abb692a2a23a2fb36418b53b8574f75ab215e6980")
 SMART_HOME_API_URL = os.getenv('SMART_HOME_API_URL', 'http://smarthome.t3st.ru/api/user.controller')
-EMAIL_HOST  = os.getenv('EMAIL_HOST', 'EMAIL_HOST')
-EMAIL_PORT  = os.getenv('EMAIL_PORT', 'EMAIL_PORT')
-EMAIL_RECEPIENT  = os.getenv('EMAIL_RECEPIENT', 'EMAIL_RECEPIENT')
+EMAIL_HOST = os.getenv('EMAIL_HOST', 'EMAIL_HOST')
+EMAIL_PORT = os.getenv('EMAIL_PORT', 'EMAIL_PORT')
+EMAIL_RECEPIENT = os.getenv('EMAIL_RECEPIENT', 'EMAIL_RECEPIENT')
 
 CELERY_BROKER_URL = 'redis://127.0.0.1:6379'
 CELERY_RESULT_BACKEND = 'redis://127.0.0.1:6379'
