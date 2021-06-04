@@ -14,7 +14,7 @@ urllib3 = ">=1.23"
 [packages]
 requests = "==2.20.0"
 celery = "==4.1.1"
-Django = "==2.2.10"
+Django = "==2.2.21"
 redis = "==2.10.6"
 marshmallow = "==2.15.1"
 jsonschema = "==2.6.0"
